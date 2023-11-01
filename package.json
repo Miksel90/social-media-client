@@ -18,6 +18,15 @@
       "eslint --fix",
       "prettier --write",
       "git add"
+    ],
+    "*.html":[
+      "prettier --write"
+    ],
+    "*.scss":[
+      "prettier --write"
+    ],
+    "*.css":[
+      "prettier --write"
     ]
   },
   "keywords": [],
