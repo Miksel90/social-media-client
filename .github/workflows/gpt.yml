@@ -1,4 +1,6 @@
-name: Unit Testing
+
+name: E2E Testing
+
 
 permissions:
   contents: read
