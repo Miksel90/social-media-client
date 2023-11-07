@@ -36,9 +36,9 @@ Added the following test files;
 - /auth/login.test.js
   - Tests successful login
   - test storing token
+    
 - /storage/localstorage.test.js
-
-- Test Deleting token when logging out
+  - Test Deleting token when logging out
 
 ### End To End testing, Cypress
 
