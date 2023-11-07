@@ -13,7 +13,7 @@ describe("Authentication", () => {
       .should("exist")
       .type("bulba@noroff.no");
     cy.get("input[type='password']:visible").should("exist").type("goldsilver");
-    cy.get("button[type=submit]").click();
+    cy.get("button[type=submit]").contains("Login").click();
     cy.window({ log: false }).then((win) => {
       cy.wrap(null, { timeout: 3000 }).should(() => {
         const profile = win.localStorage.getItem("profile");
