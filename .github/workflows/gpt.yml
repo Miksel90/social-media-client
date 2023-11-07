@@ -1,4 +1,6 @@
-name: Code Review
+
+name: E2E Testing
+
 
 permissions:
   contents: read
