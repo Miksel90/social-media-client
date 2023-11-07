@@ -7,8 +7,6 @@ describe("Authentication", () => {
   it("will login", () => {
     cy.visit("/");
     cy.wait(1000);
-    cy.get(".btn-close:visible").click();
-    cy.wait(500);
     cy.get("#registerModal").contains("Login").click();
     cy.wait(1500);
     cy.get("input[type='email']:visible")
