@@ -30,7 +30,7 @@ npm run build
 
 ## Tests
 
-### ESlint & format on commit
+### ESlint, Preetier & format on commit
 It is located in package.json file on the Formatting branch
 
 - Use the terminal 
