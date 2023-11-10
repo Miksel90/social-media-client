@@ -4,6 +4,10 @@
     "es2021": true
   },
   "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+},
   "overrides": [
     {
       "files": ["**/*.cy.js", "cypress.config.js"],
@@ -28,9 +32,5 @@
       }
     }
   ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
   "rules": {}
 }

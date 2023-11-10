@@ -17,6 +17,31 @@
     "resetMocks": false,
     "setupFiles": [
       "jest-localstorage-mock"
+    ],
+    "start": "sass --watch src/scss:dist/css & live-server",
+    "format": "prettier --write src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.html":[
+      "prettier --write"
+    ],
+    "*.scss":[
+      "prettier --write"
+    ],
+    "*.css":[
+      "prettier --write"
     ]
   },
   "keywords": [],
@@ -30,7 +55,12 @@
     "cypress": "^13.4.0",
     "eslint": "^8.52.0",
     "eslint-plugin-cypress": "^2.15.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "live-server": "^1.1.0",
+    "prettier": "^3.0.3",
     "sass": "^1.54.8"
   },
   "dependencies": {
