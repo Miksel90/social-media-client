@@ -30,12 +30,6 @@ npm run build
 
 ## Tests
 
-### ESlint, Preetier & format on commit
-It is located in package.json file on the Formatting branch
-
-- Use the terminal 
-  - Git checkout Formatting
-
 ### Unit testing, Jest
 
 Added the following test files;
