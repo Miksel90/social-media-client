@@ -1,3 +1,6 @@
+const correctEmail = "bulba@noroff.no";
+const correctPassword = "goldsilver";
+
 describe("Authentication", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -10,9 +13,13 @@ describe("Authentication", () => {
     cy.get("#registerModal").contains("Login").click();
     cy.wait(500);
     cy.get("#loginForm").should("be.visible");
-    cy.get("#loginEmail").type("bulba@noroff.no");
-    cy.get("#loginPassword").type("goldsilver");
+    cy.get("#loginEmail").type(correctEmail);
+    cy.get("#loginPassword").type(correctPassword);
     cy.get("button[type=submit]").contains("Login").click();
+
+    cy.then(
+      () => expect(window.localStorage.getItem("profile")).not.to.be.null
+    );
+    cy.then(() => expect(window.localStorage.getItem("token")).not.to.be.null);
   });
 });
-

@@ -11,17 +11,16 @@
     "cypress": "npm run test-e2e-cli",
     "test-e2e": "cypress open",
     "test-e2e-report": "cypress run --reporter mochawesome",
-    "test-e2e-cli": "cypress run"
+    "test-e2e-cli": "cypress run",
+    "format": "prettier --write src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix"
   },
   "jest": {
     "resetMocks": false,
     "setupFiles": [
       "jest-localstorage-mock"
-    ],
-    "start": "sass --watch src/scss:dist/css & live-server",
-    "format": "prettier --write src/**/*.js",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix"
+    ]
   },
   "husky": {
     "hooks": {
@@ -34,13 +33,13 @@
       "prettier --write",
       "git add"
     ],
-    "*.html":[
+    "*.html": [
       "prettier --write"
     ],
-    "*.scss":[
+    "*.scss": [
       "prettier --write"
     ],
-    "*.css":[
+    "*.css": [
       "prettier --write"
     ]
   },
