@@ -16,5 +16,7 @@ describe("Authentication", () => {
     cy.get("#loginEmail").type(correctEmail);
     cy.get("#loginPassword").type(correctPassword);
     cy.get("button[type=submit]").contains("Login").click();
+
+    cy.then(() => expect(window.localStorage.getItem("token")).not.to.be.null);
   });
 });
