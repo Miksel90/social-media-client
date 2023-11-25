@@ -1,5 +1,5 @@
-import { save } from "../storage/index.js";
-import { logout } from "../api/auth/logout.js";
+import { save } from "../../storage/save.js";
+import { logout } from "./logout.js";
 
 describe("storage", () => {
   it("removes the key from localStorage when logging out", () => {

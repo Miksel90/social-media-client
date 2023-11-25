@@ -2,9 +2,10 @@
 
 # Badges
 
-[![Unit testing](https://github.com/Miksel90/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/Miksel90/social-media-client/actions/workflows/gpt.yml)
-
-[![E2E testing](https://github.com/Miksel90/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/Miksel90/social-media-client/actions/workflows/gpt.yml)
+[![Automated Unit Testing](https://github.com/Miksel90/social-media-client/actions/workflows/unit-testing.yml/badge.svg)](https://github.com/Miksel90/social-media-client/actions/workflows/unit-testing.yml)
+[![Automated E2E Testing](https://github.com/Miksel90/social-media-client/actions/workflows/e2e.yml/badge.svg)](https://github.com/Miksel90/social-media-client/actions/workflows/e2e.yml)
+[![Code Review](https://github.com/Miksel90/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/Miksel90/social-media-client/actions/workflows/gpt.yml)
+[![Deploy static content to Pages](https://github.com/Miksel90/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/Miksel90/social-media-client/actions/workflows/pages.yml)
 
 ## Installation
 
@@ -36,9 +37,8 @@ Added the following test files;
 - /auth/login.test.js
   - Tests successful login
   - test storing token
-- /storage/localstorage.test.js
-
-- Test Deleting token when logging out
+- /auth/logout.test.js
+  - Test Deleting token when logging out
 
 ### End To End testing, Cypress
 
