@@ -16,7 +16,11 @@ describe("Authentication", () => {
     cy.get("#loginEmail").type(correctEmail);
     cy.get("#loginPassword").type(correctPassword);
     cy.get("button[type=submit]").contains("Login").click();
-
-    cy.then(() => expect(window.localStorage.getItem("token")).not.to.be.null);
+    cy.wait(3000);
+    cy.then(
+      () => expect(window.localStorage.getItem("profile")).to.not.be.null
+    );
+    cy.then(() => expect(window.localStorage.getItem("token")).to.not.be.null);
+    cy.url().should("include", "profile");
   });
 });
